@@ -40,3 +40,9 @@ locale
  cd /etc/ansible/
  ls -ltr
  ```
+
+## cheak inital ansible.config and initialize it
+```
+less ansible.cfg
+ansible-config init --disabled -t all > ansible.cfg
+```
