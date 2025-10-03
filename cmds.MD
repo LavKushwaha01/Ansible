@@ -46,3 +46,20 @@ locale
 less ansible.cfg
 ansible-config init --disabled -t all > ansible.cfg
 ```
+
+## Check yml syntax and run playbook
+```
+ansible-playbook --syntax-check filename.yml  # To check yml
+ansible-playbook filename.yml
+```
+
+### after run 02 playbook nginx is installed and running locally, which we can see by
+  ### before and after run playbook run cmd and cheak 
+  ```
+  nginx 
+ ```
+ 
+  ### to check status of nginx 
+  ```
+  systemctl status nginx.service
+  ```

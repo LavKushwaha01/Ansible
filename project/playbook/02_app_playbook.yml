@@ -1,0 +1,16 @@
+---
+- name: installing and starting nginx web server
+  hosts: localhost
+
+  tasts:
+  - name: installing nginx
+    apt:
+      name: nginx
+      state: present
+  - name: starting a nginx service
+    service: 
+      name: nginx
+      state: started
+      enabled: true
+
+

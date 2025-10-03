@@ -6,3 +6,5 @@
 
       then simply ssh directly by ssh root@Ipv4/6
 2nd. for cloud VM ssh simply by traditional method of ssh by private key
+
+** fix UTF-8 for each file and everytime either or can permanently
