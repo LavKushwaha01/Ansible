@@ -1,0 +1,2 @@
+- ansible --version
+- ansible localhost -m ping 

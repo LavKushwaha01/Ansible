@@ -1,0 +1,8 @@
+1st.  if we have any system which we want to access and that server is accessble by us then use 
+      cmd as   ssh root@Ipv4/6   
+      this ask password for that system to ssh if we want to ssh directly then copy our keygen
+      or private key of our system to that system by cmd 
+      ssh-copy-id Ipv4/6   and put password once
+
+      then simply ssh directly by ssh root@Ipv4/6
+2nd. for cloud VM ssh simply by traditional method of ssh by private key
