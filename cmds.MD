@@ -18,5 +18,3 @@
  cd /etc/ansible/
  ls -ltr
  ```
-
-## 
