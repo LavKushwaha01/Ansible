@@ -51,15 +51,39 @@ ansible-config init --disabled -t all > ansible.cfg
 ```
 ansible-playbook --syntax-check filename.yml  # To check yml
 ansible-playbook filename.yml
+ansible-playbook filename.yml -K  
+
+#-K will prompt you for your sudo password
+# -k(small k) prompts for the SSH/connection password, not the sudo password.
 ```
 
 ### after run 02 playbook nginx is installed and running locally, which we can see by
   ### before and after run playbook run cmd and cheak 
   ```
   nginx 
+  sudo nginx -t
  ```
  
   ### to check status of nginx 
   ```
   systemctl status nginx.service
   ```
+
+  ### Incase of failure check port 80 if any server already running or not
+   ```
+  sudo lsof -i :80
+   ```
+
+# For remote server:-
+
+## 1st. add ip in hosts file
+## then check it by 
+```
+ansible-inventory --list
+```
+
+## and in playbook set hosts as "localhosts -> all" then run it
+```
+ansile all -m ping
+ansible-playbook filename.yml
+```

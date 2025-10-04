@@ -1,16 +1,21 @@
 ---
-- name: installing and starting nginx web server
+- name: Installing and starting nginx web server
   hosts: localhost
+  become: yes  # run tasks as sudo
 
-  tasts:
-  - name: installing nginx
-    apt:
-      name: nginx
-      state: present
-  - name: starting a nginx service
-    service: 
-      name: nginx
-      state: started
-      enabled: true
+  tasks:
+    - name: Update apt package cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600  # optional: avoid frequent updates
 
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
 
+    - name: Start and enable nginx service
+      service:
+        name: nginx
+        state: started
+        enabled: true
