@@ -84,6 +84,12 @@ ansible-inventory --list
 
 ## and in playbook set hosts as "localhosts -> all" then run it
 ```
-ansile all -m ping
-ansible-playbook filename.yml
+ansible all -i your_IPv4(54.235.40.169), -m ping -u ubuntu --private-key ~/Downloads/your-key.pem
+ansible-playbook -i our_IPv4(54.235.40.169), your-playbook-file.yml -u ubuntu --private-key ~/Downloads/your-key.pem
+```
+## To check nginx is running in our server or not
+```
+ssh -i "your-key.pem" ubuntu@ec2-54-235-40-169.compute-1.amazonaws.com    # ssh into machine
+nginx     # cheak nginx is install or not
+systemctl status nginx.service     # cheak nginx is active or not
 ```

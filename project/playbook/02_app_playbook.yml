@@ -1,6 +1,6 @@
 ---
 - name: Installing and starting nginx web server
-  hosts: localhost
+  hosts: all
   become: yes  # run tasks as sudo
 
   tasks:

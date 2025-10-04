@@ -1,6 +1,6 @@
 ---
 - name: First playbook for ansible
-  hosts: localhost
+  hosts: all
 
   tasks:
   - name: test connectivity
